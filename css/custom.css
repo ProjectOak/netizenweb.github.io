@@ -3,7 +3,7 @@
 }
 
 html{
-/*    scroll-behavior: smooth;    */
+/*    scroll-behavior: smooth;*/
 }
 
 body{
@@ -85,10 +85,9 @@ nav .active-nav{
 }
 
 .nav-links{
-    margin: 10px;
+    margin: 0 0 40px 0;
     display: none;
     text-align: center;
-    transition: all 500ms ease;
 }
 
 ul{
