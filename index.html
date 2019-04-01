@@ -13,15 +13,15 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.3.0/css/font-awesome.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="/css/normalize.css">
-<!--    <link rel="stylesheet" href="/css/skeleton.css">-->
+    <link rel="stylesheet" href="/css/skeleton.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-<!-- Main top navigation -->
+<!-- Main navigation -->
     <nav>
         <div class="wrap">
             <a href="" class="nav-logo">netizens</a>
-            <p class="mobile-nav-links">Menu</p>
+            <p class="mobile-nav-icon">Menu</p>
         </div>
         <ul class="nav-links">
             <li><a href="#home" class="active-nav">Home</a></li>
@@ -42,12 +42,12 @@
                 <button>Download browser extension</button>
             </div>
         </div>
-        <div class="cf container">
+        <div class="container">
             <article class="about" id="about">
                 <h1>about</h1>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.</p>
             </article>
-            <article class="how-to cf" id="how-to">
+            <article class="how-to" id="how-to">
                 <h1>how-to</h1>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
                 <ul class="row cf">
@@ -138,7 +138,7 @@
                 $(this).addClass('active-nav')
             });
 
-            $(".mobile-nav-links").click(function(){
+            $(".mobile-nav-icon").click(function(){
                 $(".nav-links").slideToggle(150);
             });
             
@@ -155,19 +155,19 @@
             var x = window.matchMedia("(min-width: 770px)")
             myFunction(x)
             x.addListener(myFunction)
-        });
+            
+            
+            $('a[href^="#"]').on('click',function (e) {
 
-        // Script for smooth scrolling and offseting the height of the anchor
-        $('a[href^="#"]').on('click',function (e) {
+                var target = this.hash,
+                $target = $(target);
 
-            var target = this.hash,
-            $target = $(target);
-
-           $('html, body').stop().animate({
-             'scrollTop': $target.offset().top-125
-            }, 300, 'linear', function () {
-             window.location.hash = target;
-            });
+               $('html, body').stop().animate({
+                 'scrollTop': $target.offset().top-125
+                }, 300, 'linear', function () {
+                 window.location.hash = target;
+                });
+            });    
         });
     </script>
 </body>
